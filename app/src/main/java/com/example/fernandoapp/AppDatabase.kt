@@ -5,7 +5,7 @@ import Modelo.UsuarioDAO
 import androidx.room.*
 
 
-@Database(entities = [Usuario::class], version = 2)
+@Database(entities = [Usuario::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun usuarioDAO(): UsuarioDAO
 }

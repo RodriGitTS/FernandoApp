@@ -13,8 +13,8 @@ interface UsuarioDAO{
     @Query("SELECT * FROM usuarios")
     suspend fun getAllUsuarios(): List<Usuario>
 
-    @Query("SELECT * FROM usuarios WHERE codUsuario = :cod")
-    suspend fun getUsuarioByCod(cod: Int): Usuario?
+    @Query("SELECT * FROM usuarios WHERE nombre= :nombre")
+    suspend fun getUsuarioByCod(nombre: String): Usuario?
 
 
     @Update
