@@ -43,4 +43,5 @@ class AdaptadorRecyclerView(var usuarios:List<Usuario>, var context: Context): R
         notifyDataSetChanged()
     }
 
+
 }
