@@ -48,6 +48,7 @@ class VentanaRegistro : AppCompatActivity() {
                 edad<110
             ){
                 usuarioVIEWmodel.insertarUsuario(Usuario(nombre,pass, emai,edad))
+                Toast.makeText(this,"Datos correctos",Toast.LENGTH_SHORT).show()
 
             }else Toast.makeText(this, "Datos incorrectos",Toast.LENGTH_SHORT).show()
 

@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
             usuarioVIEWmodel.obtenerUsuarioPorNombre(nombre).observe(this){ usuario->
 
-            if(usuario!=null && usuario.pass==pass){
+            if(usuario!!.nombre==nombre && usuario.pass==pass){
                 Toast.makeText(this,"Datos correctos",Toast.LENGTH_SHORT).show()
                 var intent = Intent(this@MainActivity, VentanaUsuario::class.java)
                 startActivity(intent)
