@@ -27,15 +27,12 @@ class UsuarioViewModel(aplication:Application):AndroidViewModel(aplication) {
         try {
             usuarioDAO.insertUsuario(usuario)
             _estadoConsulta.postValue("Usuario insertado correctamente")
-        }catch (e:Exception){
+        } catch (e: Exception) {
 
-            Log.e("Rodri","Error al insertar persona")
+            Log.e("Rodri", "Error al insertar persona")
             _estadoConsulta.postValue("Error al insertar persona")
-
-
-
+        }
     }
-
     fun obtenerUsuarioPorNombre(nombre: String): LiveData<Usuario?> {
         val usuarioLiveData = MutableLiveData<Usuario?>()
         viewModelScope.launch {
@@ -46,6 +43,8 @@ class UsuarioViewModel(aplication:Application):AndroidViewModel(aplication) {
         }
         return usuarioLiveData
     }
+
+
     fun limpiarEstadoInsercion() {
         _estadoConsulta.value = null
     }
@@ -54,4 +53,3 @@ class UsuarioViewModel(aplication:Application):AndroidViewModel(aplication) {
 
 
 
-}
