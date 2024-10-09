@@ -13,6 +13,12 @@
         android:theme="@style/Theme.FernandoApp"
         tools:targetApi="31">
         <activity
+            android:name=".VentanaUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".VentanaRegistro"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
