@@ -62,6 +62,7 @@ class MainActivity : AppCompatActivity() {
                 delegate.applyDayNight()
             }else {
                 AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_NO)
+                Toast.makeText(this,"Modo oscuro desactivado",Toast.LENGTH_SHORT).show()
                 delegate.applyDayNight()
             }
         }

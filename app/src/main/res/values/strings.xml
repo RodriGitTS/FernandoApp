@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FernandoApp</string>
+    <string name="fecha">dd/mm/aa</string>
 </resources>
