@@ -1,9 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Base.Theme.FernandoApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Fondo claro -->
+        <item name="android:colorBackground">#FFFFFF</item>
+        <!-- Texto oscuro -->
+        <item name="android:textColor">#FF000000</item>
     </style>
-
-    <style name="Theme.FernandoApp" parent="Base.Theme.FernandoApp" />
 </resources>

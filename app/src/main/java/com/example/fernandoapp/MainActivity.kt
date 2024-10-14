@@ -51,5 +51,11 @@ class MainActivity : AppCompatActivity() {
             var intent = Intent(this@MainActivity, VentanaRegistro::class.java)
             startActivity(intent)
         }
+        binding.switch4.setOnClickListener {
+
+
+
+
+        }
     }
 }
