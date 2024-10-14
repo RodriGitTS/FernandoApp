@@ -50,6 +50,7 @@ class VentanaUsuario : AppCompatActivity() {
 
             actualizarFecha(calendario)
         }
+        binding.btnSalir.setOnClickListener { finish() }
 
         binding.button.setOnClickListener {
             DatePickerDialog(
