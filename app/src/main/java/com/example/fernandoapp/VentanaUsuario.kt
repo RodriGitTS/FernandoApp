@@ -56,8 +56,8 @@ class VentanaUsuario : AppCompatActivity() {
             DatePickerDialog(
                 this,
                 fecha, calendario.get(Calendar.YEAR),
-                (Calendar.MONTH),
-                (Calendar.DAY_OF_MONTH)
+                calendario.get(Calendar.MONTH),
+                calendario.get(Calendar.DAY_OF_MONTH)
             ).show()
         }
 
@@ -93,7 +93,7 @@ class VentanaUsuario : AppCompatActivity() {
     }
 
     private fun actualizarFecha(calendar: Calendar){
-        val formatoFecha="dd-mm-yyyy"
+        val formatoFecha="dd-MM-yyyy"
         val formatoSimple=SimpleDateFormat(formatoFecha,Locale.ENGLISH)
         binding.textView.text=formatoSimple.format(calendar.time)
     }

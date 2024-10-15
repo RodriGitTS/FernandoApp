@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
+    android:background="@color/backgroundColor"
     android:layout_height="match_parent"
     tools:context=".VentanaUsuario">
 
@@ -12,6 +13,7 @@
         android:layout_width="146dp"
         android:layout_height="40dp"
         android:text="@string/fecha"
+        android:textColor="@color/texColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.173"
@@ -23,6 +25,7 @@
         android:id="@+id/rv"
         android:layout_width="351dp"
         android:layout_height="482dp"
+        android:textColor="@color/texColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

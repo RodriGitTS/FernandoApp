@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
+    android:background="@color/backgroundColor"
     android:layout_height="match_parent"
     tools:context=".VentanaRegistro">
 
@@ -33,6 +34,7 @@
             android:layout_width="116dp"
             android:layout_height="38dp"
             android:text="Nombre"
+            android:textColor="@color/texColor"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.337"
@@ -46,6 +48,7 @@
             android:layout_height="60dp"
             android:ems="10"
             android:hint="Nombre"
+            android:textColor="@color/texColor"
             android:inputType="text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -56,6 +59,7 @@
 
         <EditText
             android:id="@+id/lblEmail"
+            android:textColor="@color/texColor"
             android:layout_width="210dp"
             android:layout_height="51dp"
             android:ems="10"
@@ -70,6 +74,7 @@
 
         <TextView
             android:id="@+id/txtEmail"
+            android:textColor="@color/texColor"
             android:layout_width="116dp"
             android:layout_height="38dp"
             android:text="Email"
@@ -82,6 +87,7 @@
 
         <TextView
             android:id="@+id/txtEdad"
+            android:textColor="@color/texColor"
             android:layout_width="116dp"
             android:layout_height="38dp"
             android:text="Edad"
@@ -94,6 +100,7 @@
 
         <EditText
             android:id="@+id/lblEdad"
+            android:textColor="@color/texColor"
             android:layout_width="221dp"
             android:layout_height="58dp"
             android:ems="10"
@@ -107,6 +114,7 @@
 
         <TextView
             android:id="@+id/txtPass"
+            android:textColor="@color/texColor"
             android:layout_width="116dp"
             android:layout_height="38dp"
             android:text="Password"
@@ -120,6 +128,7 @@
         <EditText
             android:id="@+id/lblPaswword"
             android:layout_width="229dp"
+            android:textColor="@color/texColor"
             android:layout_height="54dp"
             android:ems="10"
             android:hint="password"
@@ -136,6 +145,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Registrar"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.238"
