@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
+import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
@@ -51,5 +54,18 @@ class MainActivity : AppCompatActivity() {
             var intent = Intent(this@MainActivity, VentanaRegistro::class.java)
             startActivity(intent)
         }
+        binding.swModoOscuro.setOnClickListener {
+
+            if (!binding.swModoOscuro.isChecked){
+                Toast.makeText(this,"Modo oscuro activado",Toast.LENGTH_SHORT).show()
+                AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_YES)
+                delegate.applyDayNight()
+            }else {
+                AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_NO)
+                Toast.makeText(this,"Modo oscuro desactivado",Toast.LENGTH_SHORT).show()
+                delegate.applyDayNight()
+            }
+        }
+
     }
 }

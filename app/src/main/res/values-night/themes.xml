@@ -1,7 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Base.Theme.FernandoApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- Fondo claro -->
+        <item name="android:colorBackground">#FF000000</item>
+        <!-- Texto oscuro -->
+        <item name="android:textColor">#FFFFFF</item>
     </style>
 </resources>

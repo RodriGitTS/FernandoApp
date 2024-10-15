@@ -3,6 +3,8 @@ package com.example.fernandoapp
 import Adaptadores.AdaptadorRecyclerView
 import Modelo.Usuario
 import UsuarioViewModel
+import android.app.DatePickerDialog
+import android.icu.util.Calendar
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -17,6 +19,8 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.room.InvalidationTracker
 import com.example.fernandoapp.databinding.ActivityVentanaRegistroBinding
 import com.example.fernandoapp.databinding.ActivityVentanaUsuarioBinding
+import java.text.SimpleDateFormat
+import java.util.Locale
 
 
 class VentanaUsuario : AppCompatActivity() {
@@ -37,6 +41,26 @@ class VentanaUsuario : AppCompatActivity() {
 
 
         }
+
+        var calendario= Calendar.getInstance()
+        val fecha=DatePickerDialog.OnDateSetListener{datePicker, year, mes, dia ->
+            calendario.set(Calendar.YEAR,year)
+            calendario.set(Calendar.MONTH,mes)
+            calendario.set(Calendar.DAY_OF_MONTH,dia)
+
+            actualizarFecha(calendario)
+        }
+        binding.btnSalir.setOnClickListener { finish() }
+
+        binding.button.setOnClickListener {
+            DatePickerDialog(
+                this,
+                fecha, calendario.get(Calendar.YEAR),
+                calendario.get(Calendar.MONTH),
+                calendario.get(Calendar.DAY_OF_MONTH)
+            ).show()
+        }
+
         var userViewModel = ViewModelProvider(this).get(UsuarioViewModel::class.java)
 
         var usuarios=userViewModel.obtenerAllUsuarios()
@@ -65,6 +89,12 @@ class VentanaUsuario : AppCompatActivity() {
                 userViewModel.limpiarEstadoInsercion()
             }
         })
+
     }
 
+    private fun actualizarFecha(calendar: Calendar){
+        val formatoFecha="dd-MM-yyyy"
+        val formatoSimple=SimpleDateFormat(formatoFecha,Locale.ENGLISH)
+        binding.textView.text=formatoSimple.format(calendar.time)
+    }
 }
